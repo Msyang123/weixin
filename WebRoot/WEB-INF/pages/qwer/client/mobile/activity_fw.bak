@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>年会集果娃</title>
+    <meta charset="utf-8" />
+    <base href="${CONTEXT_PATH}/" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<meta name="description" content="水果熟了-年会集果娃" />
+	<#include "/WEB-INF/pages/common/_layout_mobile.ftl" />
+</head>
+<body>
+    <div class="background_img">
+        <img src="resource/image/huodong/year/集果娃1920x1080-2.jpg"/>
+    </div>
+
+    <div class="content">
+        <div class="btn_box">
+            <a id="start" onclick="start();">
+                <img src="resource/image/huodong/year/集果娃1920x1080-2_03.jpg">
+            </a>
+            <a id="end" onclick="activityEnd();">
+                <img src="resource/image/huodong/year/集果娃1920x1080-2_05.jpg">
+            </a>
+        </div>
+
+        <div class="result">
+            <table id="rankingTable">
+                <tr>
+                    <td>用户名(手机号码)</td>
+                    <td>果娃套数</td>
+                    <td>果娃总个数</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+    
+    <div id="load">
+        <img src="resource/image/huodong/year/timg.gif">
+    </div>
+    
+	<script type="text/javascript">
+		function back(){
+	 		window.history.back();
+	 	}
+		//开启活动发放果娃
+		//刷新标志
+		var flag=false;
+	  	function start(){
+	  		$("#load").show();
+	  		$.ajax({ 
+				url: "${CONTEXT_PATH}/activity/sendGuowaToAll", 
+				data: {}, 
+				success: function(data){
+					$("#load").hide();
+					flag=true;
+					$.dialog.alert("活动开始");
+		      	}
+			});
+	  	}
+	  	//活动结束
+	  	function activityEnd(){
+	  		$.ajax({ 
+				url: "${CONTEXT_PATH}/activityEnd", 
+				data: {}, 
+				success: function(data){
+					$.dialog.alert("活动结束");
+					flag=false;
+		      	}
+			});
+	  	}
+		$(function(){
+			setInterval(GetRTime,0);
+			setInterval(function(){
+			//刷新活动排行榜
+				if(flag){
+					$.ajax({ 
+						url: "${CONTEXT_PATH}/rankingList", 
+						data: {}, 
+						success: function(data){
+							
+							$("#rankingTable  tr:not(:first)").remove();
+							for(var i=0;i<data.length;i++){
+							  var trStr="<tr ";
+								if(i==0){
+									trStr+="class='one' "
+								}else if(i==1){
+									trStr+="class='two' "
+								}else if(i==2){
+								    trStr+="class='three' "
+								}
+								trStr+=">";
+								trStr+="<td>"+data[i].nickname+"("+data[i].phone_num+")</td>"+
+										"<td>"+data[i].fwBonus+"套</td>"+
+										"<td>"+data[i].fwCount+"个</td>"+
+									"</tr>"
+							  $("#rankingTable").append(trStr);
+							}
+				      	}
+					});
+				}
+			},1000);
+			function GetRTime(){
+			    var EndTime= new Date('2017/03/05 23:59:59');
+			    var NowTime = new Date();
+			    var t =EndTime.getTime() - NowTime.getTime();
+			    var d=0;
+			    var h=0;
+			    var m=0;
+			    var s=0;
+			    if(t>=0){
+			      d=Math.floor(t/1000/60/60/24);
+			      h=Math.floor(t/1000/60/60%24);
+			      m=Math.floor(t/1000/60%60);
+			      s=Math.floor(t/1000%60);
+			    }
+			    $("#t_d").html(d);
+			    $("#t_h").html(h);
+			    $("#t_m").html(m);
+			    $("#t_s").html(s);
+			  }
+			  
+		});
+	
+</script>
+</body>
+</html>

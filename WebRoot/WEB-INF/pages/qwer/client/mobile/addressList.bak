@@ -1,0 +1,30 @@
+<table style="border-collapse:collapse;background-color:#f5f5f5;text-align:left;">
+	<#list addressList as item>
+	<tr  style="border-bottom:1px solid #ddd;">
+		<td style="padding:5px;">
+			<div onclick="setAddress('${item.id}','${item.receiver_name}','${item.receiver_mobile}','${item.province}${item.city}${item.area}${item.receiver_address}');" style="float:left;width:80%;">
+							<div  style="height:25px;width:100%;">
+								<div style="float:left;width:30%;">${item.receiver_name}</div>
+								<div style="float:right;width:30%;">${item.receiver_mobile}</div>
+							</div>
+							<div style="max-width:100%;white-space:normal;">
+								<#if item.is_default='1'><span id="defaultAddr">[默认]</span></#if>
+								${item.province}${item.city}${item.area}${item.receiver_address} 
+							</div>
+						</div> 
+						<div style="float:right;height:50px;width:20%;line-height:50px;text-align:center;"  onclick="editAddress('${item.id}','${item.receiver_name}','${item.receiver_mobile}','${item.province}','${item.city}','${item.area}','${item.receiver_address}','${item.is_default}')">
+							<img height="25px" src="resource/image/me/编辑.png" />
+						</div>
+		</td>
+		
+	</tr>
+	</#list>
+	<tr>
+		<td>
+			<div style="width: 100%;" onclick="addAddress()">
+				<div style="float:left;margin-left:30%; font-size: 16px; height: 30px;line-height: 25px;"><img height="20px" src="resource/image/me/添加.png" /></div>
+				<div style="float:left;margin-left:5px;font-size: 16px; height: 30px;line-height: 30px;"> 新增地址</div>
+			</div>
+		</td>
+	</tr>
+</table>

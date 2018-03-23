@@ -1,0 +1,23 @@
+/* 浠ｇ爜鏁寸悊锛氭噿浜轰箣瀹� www.tab.com */
+*{ margin:0; padding:0; list-style:none;}
+body{ font-size:12px;}
+img{ border:none;}
+/*public*/
+.fl{display:inline;float:left}
+.fr{display:inline;float:right}
+.cf:after{content:"";clear:both;display:block;height:0;overflow:hidden}
+.cf{zoom:1}
+.pb10{padding-bottom:10px}
+.mt10{margin-top:10px}
+/*main*/
+.tab{width:100%;background:#fff;}
+.tab .title{z-index: 999;position: fixed;font-size: 14px;background-color: white;top: 50px;height: 40px;line-height: 40px; width: 100%;}
+.tab .title-list{width:100%; border-bottom: 1px solid #eeeeee;}
+.tab .title-list li{ width:25%; line-height: 40px; text-align: center; float: left; display: inline;font-size: 1.4rem;}
+.tab .title-list li.on{ color:#ed374e;}
+.tab .title-list p{position:absolute;top:34px;width:25%;height:6px;border-bottom:1px solid #ed374e; overflow: hidden; text-align: center;}
+.tab .title-list b{display:inline-block;width:0;height:0;margin-top:-3px;border-style:solid dashed dashed dashed;border-width:9px;border-color: #ff6600 #fff #fff #fff;overflow: hidden;zoom: 1;font-size: 0;}
+.product{ min-height: 368px;  overflow: hidden; display: none;}
+.product-wrap .show{ display: block;}
+
+/* 浠ｇ爜鏁寸悊锛氭噿浜轰箣瀹� www.tab.com */

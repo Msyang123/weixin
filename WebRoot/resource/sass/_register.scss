@@ -1,0 +1,85 @@
+.member-moblie{
+	background: url("../image/icon/bg-register.png");
+	background-size: cover;
+}
+
+.register-box{
+	width: 80%;
+	margin: 30% auto;
+	position: relative;
+	border: 1px solid $brandGrey;
+	border-radius: 5px;
+	background: white;
+	.red-tips{
+		color: $brandRed;
+	    font-size: 1rem;
+	    margin-top: 10px;
+	}
+}
+
+.icon-logo{
+	position: absolute;
+	width: 50%;
+	left: 50%;
+	transform: translate(-50%);
+	top: -25px;
+	
+	img{
+		width: 100%;
+	}
+}
+
+.phone-box{
+	margin-top: 5rem;
+	border-top: 1px solid $brandGrey;
+	border-bottom: 1px solid $brandGrey;
+	padding: 10px;
+}
+
+.phone-box,.password-box{
+	i {
+	    img{
+			width: 15px;
+			height: 18px;
+		}
+	}
+	
+	input{
+		border: none;
+		outline: none;
+		font-size: 1.3rem;
+		color: #555;
+	}
+} 
+
+.password-box{
+	padding: 10px;
+	button{
+		border: none;
+		outline: none;
+		border-radius: 20px;
+		background: linear-gradient(-34deg,$brandRed 60%,#ee98a4 100%);
+		color: $brandWhite;
+		font-size: 1.2rem;
+		height: 2.5rem;
+		line-height: 2.5rem;
+	}
+}
+
+.cmt-box{
+	border-top: 1px solid $brandRed;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	
+	button{
+		width: 80%;
+		background: linear-gradient(-34deg,$brandRed 80%,#ee98a4 100%);
+		color: $brandWhite;
+		border: none;
+		outline: none;
+		font-size: 1.6rem;
+		border-radius: 20px;
+		height:3.5rem;
+		line-height: 3.5rem;
+	}
+}

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>水果熟了</title>
+<meta charset="utf-8" />
+<base href="${CONTEXT_PATH}/" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no" />
+<meta name="description" content="水果熟了-订单" />
+<#include "/WEB-INF/pages/common/_layout_mobile.ftl"/>
+</head>
+<body>
+	<div data-role="page" id="order" class="tx-order">
+	
+		<div class="orderhead">
+			<div class="btn-back">
+				<a onclick="back();"><img height="20px"
+					src="resource/image/icon/icon-back.png" /></a>
+			</div>
+			<div>提货订单</div>
+		</div>
+		
+		<div class="mask1"></div>
+		<div class="loading"><img src="resource/image/icon/loading.gif"></div>
+		
+		<div data-role="main" class="mt41">
+			<form id="txOrderForm" action="${CONTEXT_PATH}/txOrderCmt" method="post" data-ajax="false">
+				<input type="hidden" name="order.deliverytype" value="1"/>
+				<table style="width: 100%;border-collapse:collapse;">
+					<tr>
+						<td class="order-left">配送方式：</td>
+						<td class="order-right"><select data-mini="true" name="order.deliverytype" id="psfs">
+								<option value="1">门店自提</option>
+						</select></td>
+					</tr>
+					<tr class="select-store-box">
+						<td class="order-left">选择门店：</td>
+						<td class="order-right"><select name="order.order_store" data-mini="true" id="md">
+							<#list storeList as item> 
+								<option value="${item.store_id}"  
+								<#if item.store_id == storeId>
+									selected=true
+								</#if>
+								>${item.store_name}</option> 
+							</#list> 
+						</select></td>
+					</tr>
+				</table>
+			</form>
+			
+			<div class="cartfoot">
+				<div class="cart-sum1"><span>￥${(balance!0)/100}</span>
+				</div>
+				<div id="txCmt" class="cartbutton">确认提货</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="modal fade" id="inv_enough" tabindex="-1" role="dialog" aria-hidden="true">
+	    <div class="modal-dialog">
+	        <div class="modal-content">            
+	            <div class="modal-body text-center">
+	                <input type="hidden" name="is_all" id="is_all" />
+	                <input type="hidden" name="is_single" id="is_single" />
+	                <input type="hidden" name="pro_ids" id="pro_ids" />
+	            	<h3>精品富士库存不足</h3>
+	            	<label><input type="checkbox" name="is_del" id="is_del"  checked="checked" style="margin-bottom:1px;"/>&nbsp;&nbsp;删除订单内库存不足的商品</label>
+	            	<div class="btn-opreations row no-gutters justify-content-between">
+	            	     <!--<div class="col-6 btn-go-pay brand-red-new">继续支付</div>-->
+	            	     <div class="col-12 btn-go-home">再去看看</div>
+	            	</div>
+	            </div>
+	        </div>
+	    </div>
+	</div><!--/End inv_enough-->
+	
+	<#include "/WEB-INF/pages/common/share.ftl"/>
+    <script data-main="scripts/main" src="plugin/dateTime/js/mobiscroll.js"></script>
+	<script data-main="scripts/main" src="plugin/dateTime/js/PluginDatetime.js"></script>
+	<script src="plugin/jQuery/json2.js"></script>	
+	<script>
+		var CONTEXT_PATH='${CONTEXT_PATH}';
+		var ajaxSettings = {
+				async: false,
+				type: "POST",
+				url: "${CONTEXT_PATH}/storeList",
+				data: {flag: 1},
+				dataType: "json"
+		};
+		
+		//当前位置
+		if($.cookie('storeInfo')==null){
+			var currentPoint ={
+					data:{lat:28.119658,lng:113.008950}
+			};
+		}else{
+			var storeInfoJson=JSON.parse($.cookie('storeInfo'));
+			var currentPoint ={
+					data:{lat:storeInfoJson.storeLat,lng:storeInfoJson.storeLng}
+			};
+		}
+		$(function(){
+			deliveryChange();
+			
+			var date = new Array();
+			
+			$("#txCmt").on("click",function(e){
+				
+				date.push(new Date());
+				if (date.length > 1 && (date[date.length - 1].getTime() - date[date.length - 2].getTime() < 1000)){
+					e.cancelBubble = true;
+					return false;
+				}
+				
+				//支付前先从cookie中删除掉库存不足的商品
+				$.ajax({
+					type: "Get",
+		            url: "${CONTEXT_PATH}/hdApi/queryTXProductsInv",
+		            dataType: "json",
+		            success: function(data){
+		            	if(data.status){
+		            		//库存不足
+		            		if(data.unEnoughInvProducts.length>0){
+		            			var modalNode=$('#inv_enough');
+				            	var str='当前门店',proIds='';
+		            			for(var i=0;i<data.unEnoughInvProducts.length;i++){
+		            				str+=data.unEnoughInvProducts[i].product_name+',';
+		            				proIds+=data.unEnoughInvProducts[i].id+',';
+		            			}
+			            		modalNode.find('h3').text(str.substring(0,str.length-1)+"库存不足");
+			            		//如果全部商品库存不足
+			            		if(data.clearAllPro){
+			            			str='当前门店库存不足，请切换门店试试!';
+			            			modalNode.find('h3').text(str);
+			            		}
+			            		console.log(proIds.substring(0,str.length-1));
+			            		modalNode.find('#is_all').val(data.clearAllPro?"ok":"");
+			            		modalNode.find('#is_single').val(data.isSingle);
+			            		modalNode.find('#pro_ids').val(proIds.substring(0,proIds.length-1));
+			            		modalNode.modal('show');
+		            		}else if(data.unEnoughInvProducts.length==0){
+		            			//库存充足
+		        				$('#txOrderForm').submit();
+		            		}
+		            	}else{
+		            		$.dialog.alert("当前门店库存不足，请切换门店试试!");
+		            	}
+		            	
+		            }
+				});
+								
+			});
+			
+			$('.btn-go-home').on('click',function(){
+				  //先判断checkbox
+				  if($('#is_del').is(":checked")){
+					  //从cookie中移除掉库存不足的商品
+					  if($('#is_all').val()=="ok"){
+						  //清除购物车存在的cookie
+						  $.cookie('basketInfo',null,{path:"/",expires: -1});
+					  }else{
+						  //清除购物车部分商品
+						  var ids=$('#pro_ids').val().split(',');
+						  var cartJson=JSON.parse($.cookie('basketInfo'));
+						  console.log("cartJson"+cartJson);
+						  var newCartJson=$.grep(cartJson, function(n,i){
+							  var flag=false;
+							  for(x=0;x<ids.length;x++){
+								  if(n.product_id==ids[x]){
+									  flag=true;
+									  return flag;
+								  }else{
+									 continue;
+								  }
+							  }
+							  return flag;
+						 },true);
+						 console.log(newCartJson);
+						 $.cookie('basketInfo',JSON.stringify(newCartJson),{expires:15,path:'/'});
+					  }
+				  }
+				  window.location.href="${CONTEXT_PATH}/myStorage";
+			});
+			
+			setTimeout(function(){
+			$(".loading").hide();
+			$(".mask1").hide();
+			},5000)
+		});
+		
+		function back() {
+			window.location.href="${CONTEXT_PATH}/myStorage";
+		}
+	
+		
+		function setStoreSelectOptions(settings){
+	    	$.ajax(settings).done(function(list){
+	    		var storeId = $.cookie('store_id');
+	    		
+	    		if(list){
+	    			var select = $("#md");
+	    			select.empty();
+		    		$.each(list, function(i, o){
+		    			if(o){
+			    			var option = $("<option></option>");
+			    			if(o["distance"]){
+				    			option.val(o.store_id).text(o.store_name + "(约" + o.distance + "km)");
+			    			}else{
+				    			option.val(o.store_id).text(o.store_name);
+			    			}
+							select.append(option); 
+		    			}
+		    		});
+		    		select.find("option[value='"+storeId+"']").attr("selected",true);
+		    		$("#md-button span").html($("#md").find("option:selected").text());
+	    		} 
+	    	});
+		}
+		
+		function deliveryChange(){
+			ajaxSettings.data.flag = 1;
+	    	ajaxSettings.data.lat = currentPoint.data.lat; 
+			ajaxSettings.data.lng = currentPoint.data.lng; 
+			setStoreSelectOptions(ajaxSettings,true);
+		}
+	</script>
+</body>
+</html>

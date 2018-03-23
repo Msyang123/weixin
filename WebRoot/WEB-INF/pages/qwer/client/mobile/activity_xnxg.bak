@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>水果熟了</title>
+	<meta charset="utf-8" />
+	<base href="${CONTEXT_PATH}/" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<meta name="description" content="水果熟了-新年鲜果" />
+	<#include "/WEB-INF/pages/common/_layout_mobile.ftl"/>
+</head>
+<body>
+	<div data-role="page">
+		<div class="back">
+				<a onclick="back();"><img height="20px"
+					src="resource/image/back.png" /></a>
+	    </div>
+		<div data-role="main">
+			<div id="content">
+				<div class="xnxg">
+					<img src="resource/image/activity/xnxg/新年鲜果详情_01.jpg" />
+					<img src="resource/image/activity/xnxg/新年鲜果详情_02.jpg" />
+					<img src="resource/image/activity/xnxg/新年鲜果详情_03.jpg" />
+				</div>
+			</div>
+		</div>
+		<div class="box-38" onclick="fruitDetial('6954312301000')"></div>
+		<div class="box-38 box-left-52" onclick="fruitDetial('90336')"></div>
+		<div class="box-22 box-left-12" onclick="fruitDetial('90037')"></div>
+		<div class="box-22 box-left-39" onclick="fruitDetial('90052')"></div>
+		<div class="box-22 box-left-66" onclick="fruitDetial('90120')"></div>
+		<div class="box-22 box-tleft-12" onclick="fruitDetial('90423')"></div>
+		<div class="box-22 box-tleft-39" onclick="fruitDetial('90418')"></div>
+		<div class="box-22 box-tleft-66" onclick="fruitDetial('90805')"></div>
+	</div>
+	<#include "/WEB-INF/pages/common/share.ftl"/>
+	<script type="text/javascript">
+		function back(){
+	 		window.location.href="${CONTEXT_PATH}/main?index=0";
+	 	}
+		
+		function fruitDetial(barcode){
+			window.location.href="${CONTEXT_PATH}/fruitDetial?barcode="+barcode;
+		}
+    </script>
+</body>
+</html>

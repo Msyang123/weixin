@@ -1,0 +1,151 @@
+.store{
+	td {
+	    padding: 5px;
+	    font-size: 1.4rem;
+	}
+	
+	.store-list{
+	
+	   h3{
+	    border-top: 1px solid $brandGrey;
+	    border-bottom: 1px solid $brandGrey;
+	    
+	    a{
+	        font-size: 1.4rem;
+		    font-weight: 400;
+		    color: $brandColor-M;
+		    background-color: white;
+		    font-family: $baseFont;
+		    border: 0;
+		    
+		    &:hover {
+		        background-color: $brandWhite;
+		        color: $brandColor-H;
+		    } 
+	     }
+	   }
+	} 
+	
+}
+
+#stroe_list {
+    margin-top: nth($NavHeight,1);
+}
+
+.store-table {
+    width: 100%;
+    text-align: left;
+    font-size: 1.3rem;
+    border-spacing: 0;
+}
+
+.store-info {
+    padding-left: 5px;
+    color:$brandColor-H;
+    width: 28%;
+    
+    span {
+        color: $brandColor-M;
+        font-size: 1.2rem;
+        margin-left: 2px;
+    }
+    
+    i {
+        display: inline-block;
+        width: 14px;
+        
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.code-box {
+    text-align: center;
+    width: 80px;
+    float: left;
+    
+    img {
+        width: 40px;
+    }
+}
+
+.adress-details{
+	height:4.8rem;
+	padding: 0 1rem;
+	.left-img{
+		height: 2.3rem;
+    	margin-top: 1.2rem;
+	}
+	.gonext-img{
+		height:2rem;
+		margin-top:1.4rem;
+	}
+	.location-box{
+		line-height:4.8rem;
+		color:$brandWhite;
+		font-size:1.2rem;
+	}
+	.delivery-box{
+		color:$brandWhite;
+		padding:0.8rem 0;
+		h4{
+			font-size:1.3rem;
+			span:last-child{
+				float:right;
+			}
+		}
+		p{
+			margin-top: 0.5rem;
+			font-size:1.2rem;
+			overflow: hidden;
+		    text-overflow: ellipsis;
+		    display: -webkit-box;
+		    -webkit-line-clamp: 1;
+		    -webkit-box-orient: vertical;
+		}
+	}
+}
+.selectStore-box{
+	padding: 1rem 1.5rem;
+	margin:0 1rem 1rem;
+	box-shadow: 0px 2px 4px 0px rgba(51, 51, 51, 0.2);
+	.now-adr{
+		margin-bottom: 1.5rem;
+		font-size:1.2rem;
+		color:$brandColor-M;
+		span{
+			color:$brandRed;
+		}
+		img{
+			height: 1.7rem;
+    		float: right;
+		}
+	}
+	.selectStore-more{
+		.selectStore-list{
+			margin: 0 -1rem;
+		    overflow: hidden;
+			.store-items{
+				padding: 0 0.5rem;
+				color: $brandColor-H;
+			    font-size: 1.2rem;
+			    border: 1px $brandGrey solid;
+			    border-radius: 12px;
+			    line-height: 2.3rem;
+			    margin-bottom:5px;
+			    margin-left:8px;
+			    white-space: nowrap;
+			    span{
+			    	color:$brandRed;
+			    }
+			}
+		}
+		#go_more{
+			font-size: 1.2rem;
+		    color: $brandColor-M;
+		    line-height: 30px;
+		}
+	}
+}

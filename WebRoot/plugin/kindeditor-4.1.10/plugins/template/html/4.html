@@ -1,0 +1,28 @@
+	 <div data-role="collapsible" data-collapsed="false">
+	      <h1>内容简介</h1>
+	      <p>私人定制是"水果熟了"公司专业的鲜果师根据不同的年龄和身体素质为您打造的0利润专属水果营养套餐。</p>
+	  </div>
+	  <div data-role="collapsible">
+	      <h1>详细介绍</h1>
+	      <p>报名时间：2016.11.16-2016.12.5</p>
+	      <p>活动规则：活动结束后，每个门店抽取10户家庭参与私人定制服务</p>
+	      <p>咨询热线：0731-83529950</p>
+	  </div>
+  
+  <form method="post" id="from1" action="http://localhost:8080/weixin/activity/activityForm">
+      <div class="ui-field-contain">
+        <label for="fullname">个人姓名：</label>
+        <input type="text" name="fullname" id="fullname" placeholder="请输入个人姓名"/>       
+        <label for="phone">手机号码：</label>
+        <input type="text" name="phone" id="phone"  placeholder="请输入手机号码"/>
+        <label for="address">所在地址:</label>
+        <input type="text" name="address" id="address" placeholder="请输入所在地址"/>
+		<label for="familySize">家庭人数:</label>
+        <input type="text" name="familySize" id="familySize" placeholder="请输入家庭人数"/>
+		<label for="income">家庭收入:</label>
+        <input type="text" name="income" id="income" placeholder="请输入家庭收入"/>
+		<label for="familyInfo">家庭情况（如老人、小孩、成人年龄等）:</label>
+       
+      </div>
+      <input type="button" onclick="$('.from1').submit();" value="提交">
+    </form>

@@ -1,0 +1,589 @@
+
+#tips {
+    font-size: 1.4rem;
+    font-weight: normal;
+    color: $brandRed;
+    display: none;
+    @include absolute-center;
+}
+
+.recievePresent {
+    position: fixed;
+    top: 100px;
+    width: 300px;
+    height: 290px;
+    z-index: 1;
+}
+
+.close-gift {
+    position: absolute;
+    right: 0;
+    width: 25px;
+    height: 25px;
+}
+
+#giftDiv {
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: $brandWhite;
+    font-size: 14px;
+    
+    > span {
+	    color: $brandRed;
+	}
+	
+	#giftImg {
+	    width: 120px;
+	    height: 120px;
+	    margin-top:  nth($NavHeight,2);
+	}
+}
+
+.present-prolist{
+
+	#cart_img {
+	    left: 20px;
+	}
+	#cart_num {
+	    left: 60px;
+	}
+} 
+
+#proDiv {
+    width: 100%;
+    border-top: 1px solid #8a8a8a;
+    border-bottom: 1px solid #8a8a8a;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.present-payment{
+
+	.present-pro-num {
+	    width: 100%;
+	    text-align: left;
+	    padding-left: 15px;
+	    padding-bottom: 5px;
+	    color:$brandColor-M;
+	}
+	
+	.present-list {
+	    border-bottom: 1px solid $brandGrey;
+	    padding: 5px 0;
+	}
+	
+	.message-text {
+	    font-size: 1.4rem;
+	}
+	
+	.pay-money {
+	    line-height: 2.5rem;
+	    text-align: left;
+	    padding: 10px 15px;
+	}
+	
+	#present-pay-btn {
+	    float: right;
+	    width: 50%;
+	    height: 100%;
+	    background-color: $brandRed;
+	    color: white;
+	    text-align: center;
+	}
+}
+
+.sent-friend {
+    font-size: 1rem;
+    line-height: 3rem;
+    color:$brandColor-H;
+    padding-left: 15px;
+    background-color:$bgGrey;
+}
+
+.pay-money {
+    font-size: 1.3rem;
+    line-height: 4rem;
+    color:$brandColor-H;
+    padding-right: 15px;
+    
+    span {
+	    color:$brandRed;
+	}
+}
+
+.present-info-table {
+    width: 80%;
+    margin-left: 20%;
+    font-size: 14px;
+}
+
+.cancel-btn {
+    float: left;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+}
+
+.past-page {
+    margin-top: 40%;
+    font-size: 16px;
+}
+
+.bottom-empty {
+    height: 3px;
+    width: 100%;
+    background-color: #dedede;
+    position: fixed;
+}
+
+.present-order .cartfoot span {
+    font-size: 1.6rem;
+    color:$brandRed;
+}
+
+.present-order textarea.ui-input-text {
+    min-height: 120px;
+}
+
+.pro-num {
+    padding-left: 10px;
+    width: 100%;
+    height: 40px;
+    text-align: left;
+    line-height: 40px;
+    border-bottom: 1px solid $brandGrey;
+    background-color:$brandWhite;
+    font-size: 1.4rem;
+    color: $brandColor-H;
+}
+
+.select-people {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color:$brandWhite;
+    border-top: 1px solid $brandGrey;
+    margin-bottom: 8px;
+}
+
+.select-people-text {
+    float: left;
+    margin-left: 10px;
+    color:$brandColor-H;
+    text-align: left;
+}
+
+.select-box {
+    float: left;
+    height: 40px;
+    margin-left: 10px;
+    line-height: 40px;
+    font-size: 12px;
+}
+
+.model-box {
+    background-color: $brandWhite;
+    border-top: 1px solid $brandGrey;
+    padding: .8rem 1rem;
+    
+    .model-tittle {
+	    text-align: left;
+	    font-size: 1.4rem;
+	    color: $brandColor-M;
+	}
+}
+
+.my-present-detail{
+
+	td {
+	    padding-top: 5px;
+	    padding-bottom: 5px;
+	}
+	
+	.present-info-box {
+	    height: 40px;
+	    line-height: 40px;
+	    font-size: 12px;
+	    border-bottom: 1px solid $brandGrey;
+	}
+	
+	.present-info-people {
+	    float: left;
+	    padding-left: 15px;
+	}
+	
+	.present-info-status {
+	    float: right;
+	    padding-right: 15px;
+	    color: $brandColor-S;
+	}
+	
+	.present-pro-num {
+	    height: 40px;
+	    line-height: 40px;
+	    padding-left: 15px;
+	    text-align: left;
+	    font-size: 12px;
+	    border-bottom: 1px solid $brandGrey;
+	    background-color:$brandWhite;
+	}
+	
+	.pro-name {
+	    height: 50px;
+	    line-height: 20px;
+	    
+	    span {
+		    font-size: 12px;
+		    color: #636363;
+		}
+	}
+	
+	.pro-price {
+	    padding-top: 10px;
+	    font-size: 1.6rem;
+	}
+	
+	.present-time {
+	    height: 40px;
+	    line-height: 40px;
+	    text-align: right;
+	    padding-right: 15px;
+	    border-bottom: 1px solid $brandGrey;
+	    background-color: $brandWhite;
+	    color: $brandColor-M;
+	}
+	
+	.total-money {
+	    color:$brandColor-M;
+	    font-size: 1.3rem;
+	    height: auto;
+	    line-height: 2.5rem;
+	    padding: 5px 5px 5px 15px;
+	    text-align: left;
+	}
+	
+	.btn-cancel {
+	    font-size: 14px;
+	}
+}  
+
+.message {
+    border-top: 5px solid $brandGrey;
+    padding-bottom: 10px;
+}
+
+.message-text {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 15px;
+    text-align: left;
+    border-bottom: 1px solid $brandGrey;
+}
+
+.message-box {
+    line-height: 20px;
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    min-height: 40px;
+    margin-top: 10px;
+}
+
+.my-present-detail #present-pay-btn, #pay-btn {
+    float: right;
+    width: 50%;
+    height: 100%;
+    font-size: 1.6rem;
+    color: $brandWhite;
+    background-color: $brandRed;
+}
+
+.tab .miss-box > a {
+    float: none;
+}
+
+.my-present {
+    background-color: $brandWhite;
+    
+    .tab {
+	    margin-top: 81px;
+	    
+	    .title-list{
+		    li {
+			    background-color: $brandWhite;
+			    border-bottom: 1px solid $brandGrey;
+			}
+		    p {	   
+			    height: 10px;
+			}
+	     } 
+	}
+	
+	.product {
+	    margin-top: 0;
+	}
+	
+	.orderstatus {
+	    color: $brandRed;
+	    font-size: 1rem;
+	}
+	
+	.recievePresent {
+	    top:  nth($NavHeight,2);
+	    height: 420px;
+	    z-index: 1003;
+	    display: none;
+	    background-image: url('../image/icon/liwuchashou.png');
+	    background-size: 100%;
+	    border-radius: 16px;
+	}
+	
+	.on {
+	    display: block;
+	}
+	
+	.off {
+	    display: none;
+	}
+	
+	.miss-box {
+	    margin-top: 30%;
+	    text-align: center;
+	    font-size: 1.6rem;
+	    line-height: 40px;
+	}
+}
+
+.product-item {
+    border-bottom: 5px solid $brandGrey;
+}
+
+.presentProDiv {
+    margin-left: 110px;
+    color: white;
+    width: 120px;
+    margin-top: 15px;
+    height: 25px;
+    line-height: 25px;
+    text-align: left;
+}
+
+.presentMsg {
+    margin-top: 10px;
+    margin-left: 34px;
+    width: 250px;
+    color: yellow;
+    height: 110px;
+    line-height: 20px;
+    text-align: left;
+    overflow: hidden;
+    overflow-y: auto;
+    font-size: 14px;
+}
+
+.presentUser {
+    margin-top: 162px;
+    margin-left: 110px;
+    color: white;
+}
+
+.recieveCmt {
+    margin-top: 10px;
+    margin-left: 80px;
+    color: white;
+    width: 140px;
+    height: 40px;
+}
+
+.present-name {
+    height: 4rem;
+    line-height: 4rem;
+    color:$brandColor-H;
+    font-size: 1.3rem;
+    
+    .time {
+	    color:$brandColor-M;
+	    font-size: 1.2rem;
+	}
+}
+ 
+.go-pro {
+    width: 100%;
+    height: 80px;
+    background-color: $bgGrey;
+    padding: .8rem;
+    
+    .swiper-slide {
+	    display: -webkit-box;
+	    display: -ms-flexbox;
+	    display: -webkit-flex;
+	    display: flex;
+	    -webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	    -webkit-justify-content: center;
+	    justify-content: center;
+	    -webkit-box-align: center;
+	    -ms-flex-align: center;
+	    -webkit-align-items: center;
+	    align-items: center;
+	}
+	
+    img {
+	    margin: 0 auto;
+	}
+}
+
+.total-money {
+    line-height: 3.5rem;
+    height: 3.5rem;
+    color: $brandColor-M;
+    font-size: 1.3rem;
+}
+
+.sum {
+    color: $brandRed;
+    font-size: 1.3rem;
+}
+
+.close-recieve {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 12px;
+    right: 10px;
+}
+
+.empty-present {
+    margin-top: 30%;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.open-recieve {
+    background-image: url('../image/icon/liwuchakan.gif');
+    background-size: 100%;
+    height: 70px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    line-height: 120px;
+}
+
+.order-opreation {
+    line-height: 3.5rem;
+    height: 3.5rem;
+    
+    .btn-white {
+	    background: $brandWhite;
+	    color:$brandRed;
+	    border: 1px solid $brandRed;
+	    border-radius: 3rem;
+	    padding: .5rem .8rem;
+	    font-size: 1rem;
+	    font-weight: normal;
+	}
+}
+
+.tab .title-list p{
+    border-bottom: 1px solid $brandRed;
+    height: 7px;
+}
+
+/*zs-present style*/
+
+#zs_list {
+    background-color: $brandWhite !important;
+    margin-top:  nth($NavHeight,2);
+    
+    #cart_img {
+	    left: 20px;
+	}
+	
+	.zs-product {
+	    padding-top: 10px;
+	    border-bottom: .5rem solid $brandGrey;
+	    
+	    .opreation {
+		    padding: .8rem 0;
+		}
+	}
+}
+
+.number-change-icon span {
+    font-size: 1.2rem;
+    line-height: 25px;
+}
+
+.divider {
+    margin-top: .5rem;
+    border-top: 1px solid $brandGrey;
+}
+
+#present_detail {
+    margin-top: nth($NavHeight,1);
+    margin-bottom:  nth($NavHeight,2);
+    background-color: $brandWhite;
+    
+    .btn-custom {
+	    border-radius: 3rem;
+	    padding: 1rem 1.4rem;
+	    font-size: 1.6rem;
+	}
+}
+
+.pro-list {
+    overflow: auto;
+    max-height: 310px;
+    
+    .pro-img {
+        height: 60px;
+        border: 1px solid $brandGrey;
+    }
+}
+
+.zs_btn {
+    width: 70%;
+    background-color:$brandRed;
+    color: white;
+    margin-left: 15%;
+    border-radius: 20px;
+    height: 25px;
+    line-height: 25px;
+}
+
+#historyp, #send-order, #present-detail {
+    margin: nth($NavHeight,1) 0  nth($NavHeight,2);
+    background-color: $brandWhite;
+}
+
+#user_list{
+
+	.user-avatar {
+	    width: 60px;
+	    height: 60px;
+	    border-radius: 50%;
+	    -webkit-border-radius: 50%;
+	    -moz-border-radius: 50%;
+	}
+	
+	.user-information {
+	    border-bottom: 1px solid $brandGrey;
+	    padding: .8rem 1.3rem;
+	    color: $brandColor-M;
+	    
+	    &:hover {
+		    background-color: #fafafa;
+		}
+	}
+} 

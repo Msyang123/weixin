@@ -1,0 +1,266 @@
+
+#fruit_detail {
+    background-color: $brandWhite;
+    
+    .pro-name{
+		font-size: 1.4rem;
+	    color: $brandColor-H;
+	    height: 23px;
+	    line-height: 23px;
+	    display: inline-block;
+	}
+	
+	.pro-num-norms{
+		font-size:1.2rem;
+		color:$brandColor-M;
+	}
+	
+	.pro-norms{
+		font-size:1.2rem;
+		color:$brandColor-M;
+		height: 25px;
+	    line-height: 25px;
+	    display: inline-block;
+	    
+	    i{
+	       font-size:1.4rem;
+ 	    }
+	}
+	
+	.pro-price{
+		font-size: 1.4rem;
+	    color: $brandColor-M;
+	    height: 25px;
+	    line-height: 25px;
+	    display: inline-block;
+	    width: 100%;
+	    text-align: right;
+	    margin-bottom: 5px;
+	    
+	    span{
+			font-size:1.6rem;
+			color:$brandRed;
+		}
+	}
+	
+	.prodiv {
+		padding:0;
+		border:1px solid $brandGrey;
+		box-shadow: 0px 5px 9.5px 0.5px rgba(0, 0, 0, 0.1);
+		
+		p{
+		  text-align:left;
+		  margin-left: 7px;
+		}
+	}
+	
+	.ui-grid-b{
+		margin-top:0;
+	}
+	
+	#cart_num {
+	    z-index: 99;
+	    right: 20px;
+	    bottom: 108px;
+	    left:auto;
+	}
+	
+	#cart_img {
+	    right: 20px;
+	    z-index: 99;
+	    bottom: 75px;
+	    left: auto;
+	}
+	.btn-home{
+	    z-index: 99;
+	    position: fixed;
+	    bottom: 150px;
+	    right: 20px;
+	    img{
+	    	width:50px;
+	    }
+	}
+} 
+
+.prodiv {
+    padding: 5px;
+}
+
+.maintop {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.4rem;
+    border-top: 1px solid $brandGrey;
+    color: $brandColor-H;
+    background-color: $brandWhite;
+    
+    i{
+	      width:5px;
+	      height:5px;
+	      @include rounded-circle;
+	      display:inline-block;
+	      background-color:#000;
+	      margin-bottom:3px;
+    }
+}
+
+.detial-top {
+    height: 35px;
+    line-height: 35px;
+    border-top:1px solid $brandGrey;
+    color: $brandColor-H;
+    font-size: 1.4rem;
+}
+
+#back img {
+    height: 23px;
+    width: 12px;
+}
+
+#product_detail {
+     background-color: $brandWhite;
+     padding: 7px 15px;
+     position:relative;
+     
+    .btn-purchase {
+	    font-size: 1rem;
+	    width: 48%;
+	    float: left;
+	    border-radius: 20px;
+	    font-weight: 400;
+	    padding: 4px;
+	    box-sizing: border-box;
+	    margin-bottom:none !important;
+	}
+	
+	.no-enough{
+	    position:absolute;
+	    top: 1.5rem;
+    	right: 10%;
+	    background:url('../image/icon/kucunbuzu_icon.png') 0 0 no-repeat scroll;
+	    background-size:contain;
+	    width:50px;
+	    height:50px;
+	}
+	
+   .addToCart {
+	    background: white;
+	    color: $brandRed;
+	    border: 1px solid $brandRed;
+	    height: 30px;
+	    
+	    &:active {
+	        background-color: #ed374e;
+	        color:$brandWhite;
+	    }
+	}
+	
+	.goToBuy {
+	    background: linear-gradient(-34deg,$brandRed 60%,#ee98a4 100%);
+	    color: $bgGrey;
+	    height: 30px;
+	    border: 1px solid $brandRed;
+	}
+}
+
+.detail_introduce {
+    min-height: 180px;
+    font-size: 1.4rem;
+    margin:10px 15px 0; 
+    
+    img{
+       margin-bottom:10px;
+    }
+}
+
+/*fruit kind style*/
+#menu {
+    width: 20%;
+    max-height: 440px;
+    position: fixed;
+    overflow-y: auto;
+    overflow-x: hidden;
+    top: nth($NavHeight,1);
+    left: 0;
+    background-color: $bgGrey;
+    z-index: 988;
+    
+    li {
+	    width: 100%;
+	    height: 4rem;
+	    list-style-type: none;
+	    color: $brandColor-H;
+	    text-align: center;
+	    line-height: 4rem;
+	    border-bottom: 1px solid $brandGrey;
+	    position: relative;
+	    font-size: 1.2rem;
+	    
+	    .catdiv {
+	        color: $brandRed;
+	        background-color: $brandWhite;
+	    }
+	}
+}
+
+#menuShadow {
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    top: nth($NavHeight,1);
+    left: 0;
+    background-color: $bgGrey;
+}
+
+#content {
+    width: 80%;
+    margin: 0 auto;
+    position: absolute;
+    top: nth($NavHeight,1);
+    left: 20%;
+    overflow: auto;
+}
+
+#fruit_kind {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.rep-area {
+    margin-top: nth($NavHeight,1);
+    padding-top: 10px;
+    
+    span {
+        font-size: 1.4rem;
+        color: #8a8a8a;
+    }
+    
+    .rep-content {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 10px;
+        text-align: left;
+        background-color: white;
+        
+        p {
+		    font-size: 1.4rem;
+		    color: $brandColor-H;
+		}
+    }
+}
+
+ul#rep_list li {
+    border-bottom: 1px solid $brandGrey;
+    
+    > a {
+	    font-size: 1.4rem;
+	    font-weight: 400;
+	    color: $brandColor-M;
+	    background-color: white;
+	    font-family:$baseFont;
+	    border: 0;
+	}
+}

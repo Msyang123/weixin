@@ -1,0 +1,120 @@
+.search-box {
+    width: 70%;
+    position: fixed;
+    left: 40px;
+    
+    input {
+        width: 100%;
+        height: 35px;
+        line-height: 35px;
+        border-radius: 20px;
+        border: 1px solid $brandGrey;
+        padding-left: 35px;
+        vertical-align: middle;
+    }
+    
+    img {
+        width: 20px;
+        height: 20px;
+        position: fixed;
+        left: 50px;
+        top: 16px;
+    }
+}
+
+.btn-search {
+    width: 20%;
+    position: fixed;
+    font-size: 1.4rem;
+    right: 0;
+    
+    a {
+	    font-size: 1.4rem;
+	    color:$brandColor-H !important;
+	    font-weight: 400;
+	}
+}
+
+.btn-search-two {
+    width: 20%;
+    position: fixed;
+    font-size: 1.4rem;
+    right: 20%;
+}
+
+.recharge-area {
+    padding-top:15px;
+    
+    .recharge-info {
+	    padding: 3rem .5rem;
+	    
+	    p {
+		    line-height: 1.4rem;
+		    font-size: 1.4rem;
+		    color: $brandColor-M;
+		    margin-bottom: .7rem;
+		}
+	}
+	
+	.recharge-box {
+	    border: 1px solid $brandGrey;
+	    margin: 50px 15px 20px 15px;
+	    
+	    h3 {
+		    font-size: 1.5rem;
+		    height: 4rem;
+		    line-height: 4rem;
+		    color: $brandColor-M;
+		    text-align: left;
+		    margin: 0 10px 0;
+		}
+		
+		.other-methoed {
+		    padding-left: 25px;
+		    text-align: left;
+		    margin: 1.5rem 0 1rem;
+		    
+		    p {
+			    font-size: 1.2rem;
+			    color: $brandColor-M;
+			    margin: 15px 0;
+			}
+			
+		    .other-money {
+			    font-size: 1.3rem;
+			    height: 2.8rem;
+			    line-height: 2.8rem;
+			    color:$brandColor-H;
+			    margin-bottom: .8rem;
+			    
+			    input {
+			    	width:8rem;
+				    border: 1px solid $brandGrey;
+				    padding-left: .5rem;
+				}
+			}
+		}
+	}
+	
+	.btn-recharge {
+	    padding: 0 1.2rem;
+	    padding-bottom:2rem;
+	    
+	    .btn-custom {
+		    border-radius: 3rem;
+		    padding: 1rem 1.4rem;
+		    font-size: 1.6rem;
+		}
+	}
+	
+}
+
+.m-banner{
+	    border-top:1px solid $brandGrey;
+	    padding-top:15px;
+	    //background-color:$brandWhite;
+	    
+	    a{
+	       display:block;
+	    }
+}

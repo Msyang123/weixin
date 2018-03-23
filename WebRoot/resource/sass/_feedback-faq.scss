@@ -1,0 +1,135 @@
+
+.feed-back{
+    padding: 10px;
+    margin-top: nth($NavHeight,1);
+    background-color: $brandWhite;
+    
+   .fb-tittle-box{
+       height: 40px;
+       line-height: 40px;
+       
+	   label {
+		    float: left;
+		    font-size: 1.4rem;
+		    color: $brandColor-H;
+		    margin-bottom: 0;
+		    width: 30%;
+		    text-align: left;
+	   }
+	   input {
+		    border: 0;
+		    width: 70%;
+	   }
+   }
+   
+   p {
+        height: 35px;
+        line-height: 35px;
+        color: $brandColor-H;
+        font-size: 1.4rem;
+        text-align: left;
+        border-top: 1px solid $brandGrey;
+    }
+} 
+
+.faq-list{
+    padding: 10px;
+    margin-top: nth($NavHeight,1);
+    background-color: white;
+    
+    p {
+        line-height: 1.4em;
+        font-size: 14px;
+    }
+}
+
+#fb_content {
+    min-height: 83px;
+    margin: 10px 0;
+}
+
+#faq_list {
+    background-color: $brandWhite;
+    
+    .help-list-same{
+	   div {
+		  border: 1px soild $brandGrey !important;
+	   }
+	   
+	   p{
+		    font-size: 1.2rem;
+		    color: $brandColor-H;
+		    line-height: 30px;
+	   }
+	   
+       h3{
+            border-top: 1px solid $brandGrey;
+            border-bottom: 1px solid $brandGrey;
+         
+	         a{
+		        font-size: 1.4rem;
+			    font-weight: 400;
+			    color:$brandColor-M;
+			    background-color: white;
+			    font-family:$baseFont;
+			    border: 0;
+			    
+			    &:hover {
+				    background-color: #f6f6f6;
+				    color: $brandColor-H;
+				}
+	         }
+       }
+    }  
+}
+
+.faq_menu {
+    height: 120px;
+    float: left;
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+}
+
+.fq_cat {
+    height: 40px;
+    width: 100%;
+    background-color: $brandGrey;
+    line-height: 40px;
+}
+
+table#faq_table, table#health_table {
+    width: 100%;
+    border-collapse: collapse;
+    
+    td{
+      width: 50%;
+      
+      a{
+        font-weight: 400;
+	    border: 1px solid $brandGrey;
+	    display: block;
+	    padding-top: 15px;
+	    padding-bottom: 15px;
+	    font-size: 1.4rem;
+	    margin: 5px;
+	    box-sizing: border-box;
+	    line-height: 30px;
+	    color: $brandColor-H;
+      }
+    }
+}
+
+.help-list {
+    margin-top: nth($NavHeight,1);
+    padding: 10px;
+}
+
+#feed_back .recede-box {
+    height: 120px !important;
+}
+
+.health-list {
+    background-color: white;
+    margin-top:nth($NavHeight,1);
+}

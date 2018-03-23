@@ -1,0 +1,24 @@
+
+@mixin absolute-center($positionCenter:absolute){
+    position: $positionCenter;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    -webkit-transfrom: translate(-50%,-50%);
+    -moz-transfrom:translate(-50%,-50%);
+    -o-transfrom:translate(-50%,-50%);
+}
+
+@mixin rounded-circle{
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius:50%;
+    border-radius: 50%;
+}
+
+@mixin rounded-circle-value($radius:4px){
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -o-border-radius:$radius;
+    border-radius: $radius;
+}

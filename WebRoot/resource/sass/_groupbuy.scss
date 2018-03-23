@@ -1,0 +1,155 @@
+.group-buy-content{
+     .see-mine{
+        line-height:3.5rem;
+        height:3.5rem;
+        background-color:$brandRed;
+        font-size:1.4rem;
+        color:$brandWhite;
+     }
+     
+     .banners{
+         background-size: cover;
+         //height: 180px;
+         a{
+            display:block;
+            float:right;
+            font-size:1.4rem;
+            margin-right:1.4rem;
+         }
+     }
+     .products-list{
+         h4{
+            height:3.5rem;
+            line-height:3.5rem;
+            border-bottom:1px solid $brandGrey;
+         }
+         
+         .pro-item{
+              padding:0.5rem 0;
+              border-bottom:1px solid $brandGrey;
+	         .pro-name{
+	            font-size:1.4rem;
+	            color:$brandColor-H;
+	            white-space:nowrap;
+	            text-overflow:ellipsis;
+	            overflow:hidden;
+	            margin-bottom:0.5rem;
+	            margin-top: 0.5rem;
+	            .pro-standard{
+	               font-size:1.2rem;
+	               color:$brandColor-S;
+	            }
+	         }
+	         .group-num{
+	            font-size:1.3rem;
+	            color:$brandColor-M;
+	            span{
+	              color:$brandOrange;
+	            }
+	         }
+	         .pro-price-num{
+	            font-size:1.5rem;
+	            line-height:3.6rem;
+	            color:$brandOrange;
+	         }
+	         .btn-groups{
+	            font-size:1.3rem;
+	         }
+         }
+     }
+}
+
+#activity_rules{
+   .modal-dialog{
+       width: 80%;
+       margin: 20% auto;
+       .close{
+          font-size:2.4rem;
+       }
+       ol{ 
+           padding-left:1.8rem;
+	       li{
+	          display: list-item;
+	          list-style-type: decimal !important;
+              text-align: -webkit-match-parent;
+	          line-height:2rem;
+		  	  font-size: 1.2rem;
+		      text-align: left;
+		      color:$brandColor-M;
+	       }
+       }
+   }
+}
+
+.my-group-content{
+	.progroup-list{
+		padding: 10px;
+		max-height: 100%;
+        overflow: auto;
+		.progroup-detail{
+			border-radius: 5px;
+		    background-color: #FFEFE7;
+		    margin: 0 0 10px 0;
+    		overflow: hidden;
+			.detail-name{
+				 padding: 5px 0;
+    			 background-color: #FF4E02;
+    			 p{
+	    			 color:$brandWhite;
+				     font-size: 1.2rem;
+					 margin-top: 3px;
+					 white-space:nowrap;
+              		 text-overflow:ellipsis;
+              		 overflow:hidden;
+    			 }
+    			 p:first-child{
+    			 	 font-size: 1.4rem;
+    			 }
+			}
+			.detail-time{
+				padding: 5px 0 5px 10px;
+				p{	
+					color:$brandColor-M;
+					text-align: left;
+				    font-size: 1.4rem;
+				    height: 25px;
+    				line-height: 25px;
+				    span{
+				    	color:#ff4d00;
+				    }
+				}
+				p:first-child{
+					color:$baseAColor;
+				}
+			}
+			.detail-btn{
+			    padding:5px 6px 0 0;
+				button{
+				   padding: 0.3rem 1rem;
+                   font-size: 1.3rem;
+				}
+				p{
+				    white-space:nowrap;
+              	    text-overflow:ellipsis;
+              		overflow:hidden;
+				}
+			}
+		}
+		.down{
+			background-color: $brandRed;
+    		color: $brandWhite;
+    		padding: 3px 10px;
+   			border-radius: 20px;
+    	}
+	}
+}
+
+.empty-group{
+     margin-top:3.5rem;
+     p{
+        font-size:1.4rem;
+        span{
+           font-size:1.8rem;
+        }
+     }
+}

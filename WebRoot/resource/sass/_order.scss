@@ -1,0 +1,902 @@
+
+.tx-order{
+
+   .order-left{
+	    color: $brandColor-H;
+	    font-size: 1.4rem;
+	    text-align: left;
+	    padding-left: 10px;
+	    width: 30%;
+   }
+   
+   .order-right{
+	    padding-right: 10px;
+	    width: 70%;
+	    span {
+	        font-size: 1.4rem;
+	        font-weight: 400;
+	        font-family: $baseFont;
+        }
+   }
+
+} 
+.order-page{
+	.form-control:focus{
+		border-color:$brandGrey;
+	}
+	.o-info{
+		margin-bottom:5px;
+	}
+	.o-info-txt{
+		font-size:1.4rem;
+		color:$brandColor-H;
+		line-height:48px;
+		text-align: right;
+	}
+	#md-button span,#psfs-button span{
+		font-weight:400;
+	}
+	.coupon-list{
+		overflow: auto;
+	    max-height: 320px;
+	}
+}
+
+#present_tips {
+    text-align: left;
+    font-size: 1.2rem;
+    color: $brandRed;
+    display: none;
+    margin-left: 15px;
+}
+
+#selectFriendPage {
+    background-color: $brandWhite;
+}
+
+#balance_transfer {
+    margin-top: nth($NavHeight,1);
+    background-color: $brandWhite;
+}
+
+.select-friends, .transfer-area {
+    height: nth($NavHeight,2);
+    line-height: nth($NavHeight,2);
+    font-size: 1.4rem;
+    color: $brandColor-H;
+    border-bottom: 1px solid $brandGrey;
+}
+
+.confrim-transfer {
+    margin-top: 20px;
+    padding: 0 1.3rem;
+    
+    .btn-transfer {
+        border-radius: 3rem;
+        padding: 1rem 1.4rem;
+        font-size: 1.6rem;
+        color: $brandWhite !important;
+    }
+}
+
+.search-phone {
+    margin-top: 131px;
+    color: $brandColor-H;
+    font-size: 1.3rem;
+}
+
+.content-left {
+    float: left;
+    text-align: left;
+    font-size: 1.4rem;
+    color: $brandColor-H;
+    width: 80%;
+    padding-left: 10px;
+}
+
+.addrdiv {
+	width:100%;
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    border-top: 2px dashed $brandRed;
+    border-bottom: 2px dashed $brandRed;
+    min-height: 50px;
+    height: auto;
+    background-color: $bgGrey;
+    overflow: hidden;
+    display: none;
+}
+
+#cancel {
+    position: fixed;
+    top: 2px;
+    right: 2px;
+}
+
+#tipsDiv {
+    height: 30px;
+    line-height: 30px;
+    background-color: $brandGrey;
+    color: $brandRed;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: nth($NavHeight,1);
+}
+
+.loading {
+    position: fixed;
+    top: 45%;
+    left: 45%;
+    z-index: 1003;
+}
+
+#detialAddress {
+    float: left;
+    width: 90%;
+    font-size: 12px;
+}
+
+#xzshdz {
+    line-height: 50px;
+    font-size: 1.4rem;
+    color: $brandRed;
+}
+
+#address_info {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.order-money {
+    float: left;
+    font-size: 1.6rem;
+    margin-left: 50px;
+}
+
+#commit_btn {
+    font-size: 1.6rem;
+    color: white;
+    background-color: $brandRed;
+    width: 40%;
+    border:none;
+}
+
+.total {
+    width: 75%;
+    line-height: 30px;
+    font-size: 16px;
+}
+
+#rcvmobile_text {
+    float: left;
+    margin-left: 10px;
+    font-size: 1.2rem;
+}
+
+#rcvaddress_text {
+    max-width: 100%;
+    white-space: normal;
+    font-size: 1rem;
+}
+
+.right-img {
+    float: right;
+    width: 10%;
+    height: 50px;
+    line-height: 50px;
+    
+    img {
+	    width: 60%;
+	    height: 60%;
+	}
+}
+
+.info-box {
+    margin-top: 40px;
+    background-image: url('../image/icon/background.jpg');
+}
+
+.info-name {
+    text-align: left;
+    padding-left: 10px;
+    font-size: 1.4rem;
+    color: $brandColor-M;
+}
+
+.full-btn {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.my-order-detail {
+    background-color: white;
+    
+    input[type=checkbox] {
+	    position: absolute;
+	    right: 20px;
+	}
+	
+	.content {
+	    background-color: white;
+	    width: 100%;
+	    line-height: 40px;
+	    min-height: 40px;
+	    padding-left: 10px;
+	    border-bottom: 1px solid $brandGrey;
+	    overflow: hidden;
+	}
+	
+	.pro-name {
+	    width: 100%;
+	    font-size: 1.2rem;
+	    text-align: left;
+	    line-height: 20px;
+	    color:$brandColor-H;
+	    
+	    span {
+		    font-size: 1.2rem;
+		    color: $brandColor-M;
+		}
+	}
+	
+	.pro-price {
+	    color: $brandRed;
+	    text-align: left;
+	    font-size: 1.2rem;
+	    margin-top: 5px;
+	}
+	
+	.pro-num {
+	    font-size: 1.2rem;
+	    color: #de473e;
+	}
+	
+	td {
+	    padding-top: 5px;
+	    padding-bottom: 5px;
+	}
+	
+	#detialAddress {
+	    width: 100%;
+	}
+	
+	#rcvname_text {
+	    margin-left: 32px;
+	}
+	
+	#pay-btn {
+	    font-size: 1.6rem;
+	    color:$bgGrey;
+	    background-color: $brandRed;
+	}
+	
+	.btn-operation {
+	    float: left;
+	    width: 50%;
+	    height: 100%;
+	    font-size: 1.6rem;
+	    color:$bgGrey;
+	    background-color: $brandRed;
+	    margin-top: 0;
+	}
+	
+	.detail-recede a{
+	   &:visited {
+	     color: white !important;
+	   }
+	   
+	   &:hover {
+		    color: white !important;
+	   }
+	}
+	
+	.btn-cancel {
+	    font-size: 1.6rem;
+	    background-color: $bgGrey;
+	    color: $brandColor-H;
+	}
+}
+
+.procontent {
+    background-color: $bgGrey;
+    width: 100%;
+}
+
+.pro-price-content {
+    width: 100%;
+    background-color: white;
+    margin-bottom: 70px;
+}
+
+.order-info {
+    min-height: 40px;
+    width: 100%;
+    line-height: 40px;
+    background-color: white;
+    border-bottom: 1px solid $brandGrey;
+    overflow:hidden;
+    text-align:left;
+}
+
+.order-number {
+    float: left;
+    padding-left: 10px;
+    font-size: 1.4rem;
+    color: $brandColor-M;
+    
+    span {
+	    color: $brandColor-H;
+	    margin-left: 20px;
+	}
+}
+
+.order-state {
+    float: right;
+    padding-right: 10px;
+    color: $brandRed;
+    font-size: 1.2rem;
+}
+
+#addressDiv {
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 2px dashed #eec800;
+    border-bottom: 2px dashed #eec800;
+    min-height: 40px;
+    height: auto;
+    background-color: $bgGrey;
+    overflow: hidden;
+}
+
+#address_detail {
+    width: 100%;
+    height: 100%;
+}
+
+.receiver-box {
+    height: 25px;
+    width: 100%;
+}
+
+.receiver-mobile {
+    float: left;
+    margin-left: 10px;
+}
+
+.address-box {
+    width: 100%;
+    min-height: 40px;
+    height: auto;
+    overflow: hidden;
+}
+
+.address-detail {
+    float: left;
+    width: 80%;
+    margin-left: 10px;
+}
+
+.address-img {
+    float: left;
+    width: 10%;
+}
+
+.order-info-text {
+    float: left;
+    font-size: 1.4rem;
+    color: $brandColor-M;
+    width: 20%;
+    text-align: left;
+}
+
+.procontent-number {
+    height: 35px;
+    line-height: 35px;
+    text-align: left;
+    padding-left: 10px;
+    font-size: 1.4rem;
+    color: $brandColor-H;
+    background-color: white;
+}
+
+#pay-btn {
+    float: right;
+    width: 50%;
+    height: 100%;
+}
+
+.btn-cancel {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.detail-recede {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    
+    .btn-recede {
+	    display: block;
+	    width: 85%;
+	    height: 40px;
+	    line-height: 40px;
+	    margin: 15px auto;
+	    border-radius: 20px;
+	    background: linear-gradient(-34deg,$brandRed 80%,#ee98a4 100%);
+	    color: white;
+	    font-size: 1.6rem;
+	    font-weight: 400;
+	}
+}
+ 
+.float-left {
+    float: left;
+    margin-left: 10px;
+    font-size: 1.2rem;
+    color: $brandColor-H;
+}
+
+.float-right {
+    float: right;
+    margin-right: 10px;
+}
+
+.clear-both {
+    clear: both;
+}
+
+.my-order {
+    background-color: white;
+    
+    input[type=checkbox] {
+	    position: absolute;
+	    top: 16px;
+	    right: 20px;
+	}
+	
+	.product table {
+	    width: 100%;
+	    border-collapse: collapse;
+	    
+	    tr {
+		    border-top: 5px solid $brandGrey;
+		    &:first-child {
+			    border-top: 0;
+			}
+		}
+	}
+	
+	.pro-detail-box {
+	    height: 80px;
+	    background-color: $bgGrey;
+	    padding: 0.8rem;   
+	    
+	    img{
+			height:60px;
+			margin:0 auto;
+			width: 100%;
+		    background: url('../image/logo/loadSmall.jpg') no-repeat center white;
+		    background-size: 80%;	
+		}
+	}
+	
+	.total-box{
+		height:40px;
+		line-height:40px;
+		padding-right:0.5rem;
+	}
+	
+	.orderstatus {
+	    color: $brandRed;
+	    font-size: 1rem;
+	}
+	
+	.order-status-box {
+	    height: 38px;
+	    line-height: 38px;
+	}
+	
+	.total-num {
+	    font-size: 1rem;
+	    color: $brandColor-M;
+	}
+	
+	.total-price-box {
+	    text-align: left;
+	}
+	
+	.total-price {
+	    display: inline-block;
+	    color: $brandColor-M;
+	    font-size: 1.2rem;
+	    
+	    span {
+		    color: $brandRed;
+		    font-weight: 400;
+		    font-size: 1.3rem;
+		}
+	}
+	
+	.btn-pay {
+	    margin-left: 5px;
+	    width: 45%;
+	    font-size: 1rem;
+	    font-family: $baseFont;
+	    border-radius: 20px;
+	    float: right;
+	    color: white;
+	    border: 0;
+	    font-weight: 400;
+	    padding: 5px;
+	    background: linear-gradient(-34deg,$brandRed 60%,#ee98a4 100%);
+	}
+	
+	.btn-cancel-order {
+	    height: 25px;
+	    width: 45%;
+	    font-size: 1rem;
+	    font-weight: 400;
+	    float: right;
+	    border: 1px solid $brandRed !important;
+	    color: $brandRed !important;
+	    box-sizing: border-box;
+	    border-radius: 20px;
+	    padding: 4px;
+	    background: white !important;
+	    
+	    &:hover {
+		    background-color: $brandRed !important;
+		    color: $brandWhite !important;
+		}
+	}
+	
+	.btn-confirm {
+	    height: 25px;
+	    width: 45%;
+	    font-size: 1rem;
+	    font-family:$baseFont;
+	    font-weight: 400;
+	    float: right;
+	    border-radius: 20px;
+	    color: white;
+	    background: linear-gradient(-34deg,$brandRed 60%,#ee98a4 100%);
+	    border: 0;
+	    padding: 5px;
+	}
+	
+	.btn-recede {
+	    font-size: 1rem;
+	    height: 25px;
+	    box-sizing: border-box;
+	    padding: 5px;
+	    color: $brandRed;
+	    font-weight: normal;
+	    border: 1px solid $brandRed !important;
+	    float: right;
+	    width: 45%;
+	    border-radius: 20px;
+	    background-color: $brandWhite;
+	}	
+	
+	.empty-order,.empty-cart{
+		margin-top: 30%;
+	    font-size: 16px;
+	    line-height: 40px;
+	    text-align: center;
+	    img{
+	    	width:50%;
+	    }
+	}
+	
+	.pro-status {
+	    height: 30px;
+	    text-align: left;
+	    line-height: 30px;
+	}
+}
+
+#cancel_order .btn-recede{
+	color: $brandRed;
+	border:1px solid $brandRed;
+	
+	&:hover{
+		color:white;
+	}
+}
+
+.btn-non-arrival {
+    margin-right: 5px;
+}
+
+.cancel-desc {
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 5px;
+    
+    p {
+	    float: left;
+	    font-size: 1.4rem;
+	    color:$brandColor-H;
+	}
+	
+	lable {
+	    float: right;
+	    margin-right: 10px;
+	}
+	
+	.ui-checkbox {
+	    position: absolute;
+	    right: 40px;
+	    top: 20px;
+	}
+}
+
+.cancel-reason {
+    p {
+	    text-align: left;
+	    height: 30px;
+	    line-height: 30px;
+	    color: $brandColor-H;
+	    font-size: 1.4rem;
+	}
+}
+
+.cancel-reason .confirm-recede, 
+.hd-recede {
+    display: block;
+    width: 50%;
+    height: 35px;
+    line-height: 35px;
+    margin: 10px auto;
+    border-radius: 20px;
+    background: linear-gradient(-34deg,$brandRed 60%,#ee98a4 100%);
+    color: white !important;
+    font-size: 1.4rem;
+    font-weight: 400 !important;
+}
+
+.my-order .recede-box, 
+.my-order-detail .recede-box {
+    height: 90px !important;
+}
+
+.user-fruits {
+    clear: both;
+    text-align: left;
+    border-bottom: 1px solid $brandGrey;
+    padding-bottom: 5px;
+    
+    li {
+	    display: inline-block;
+	    position: relative;
+	    border: 1px solid $brandGrey;
+	    margin-right: 5px;
+	    cursor: pointer;
+	    margin-bottom: 5px;
+	    
+	    &.active {
+		    border: 1px solid $brandRed;
+		}
+		
+		> input {
+		    position: absolute;
+		}
+		
+		.ui-checkbox {
+		    display: none;
+		}
+		
+		span {
+		    display: none;
+		    background-image: url(../image/icon/icon-check-white.png);
+		    width: 15px;
+		    height: 14px;
+		    position: absolute;
+		    right: 0;
+		    background-color: $brandRed;
+		    background-size: cover;
+		    text-align: center;
+		    line-height: 14px;
+		    bottom: 0;
+		}
+	}
+}
+
+.shadeOrder{
+		width: 100%;
+	    height: 100%;
+	    background:rgba(0, 0,0, 0.7) none repeat scroll 0 0 !important;
+	    z-index:1000;
+	    left: 0;
+	    top: 0;
+	    position: fixed;
+		.order-code{
+		    height: 35px;
+		    line-height: 35px;
+		    background-color: white;
+		    width: 52%;
+		    border-radius: 5px;
+		    margin-top: 80px;
+		    margin-left: 10px;
+		    font-size: 1.4rem;
+		}
+		.icon{
+			display: block;
+		    width: 100px;
+		    margin-left: 70px;
+		    img{
+		    	width:100%;
+		    	transform: rotateY(180deg);
+		    }
+		}
+		.close{
+		    display: block;
+		    position: absolute;
+		    top: 10px;
+		    right: 10px;
+		    width: 20px;
+		    height: 20px;
+		    img{
+		    	width:100%;
+		    }
+		}
+		p{
+			color: white;
+		    font-size: 1.4rem;
+		    height: 30px;
+		    line-height: 30px;
+		    span{
+		    	color: $brandRed;
+		    }
+		}
+}
+
+#inv_enough{
+
+   .modal-dialog{
+        top:40%;
+        margin: 0 8%;
+        
+         .modal-content{
+			   	border:none;
+				@include rounded-circle-value(.4rem);
+				clear:both;
+				
+				.modal-body{
+				    padding-left:0;
+				    padding-right:0;
+				    
+				    h3{
+				        padding:0 15px;
+				    }
+				    
+				    label{
+				        margin:2rem 0 3rem;
+				        color:$brandColor-M;
+				    }
+				}
+				
+				 .btn-opreations{
+		            border-top:1px solid $brandGrey;
+		            border-bottom:1px solid $brandGrey;
+		            height:4rem;
+		            font-size:1.5rem;
+		            color:$brandColor-M;
+		            transition:color .15s ease-in-out;
+		            
+		            div{
+		                height:100%;
+		                line-height:4rem;
+		                
+		                &.disable{
+		                   color:$brandColor-S;
+		                }
+		            }
+		         }   
+		  }
+   }
+}
+
+.order-table{
+	width:100%;
+}
+
+.middle-modal{
+	margin: 48px 20px 0;
+	.modal-title{
+	    font-size: 1.5rem;
+    	margin: 0 auto;
+	}
+}
+.change-box{
+	padding: 0 5px;
+	margin-bottom: 10px;
+    position: relative;
+    input{
+    	border-radius: 20px;
+    	padding-left: 10px;
+    }
+    .btn-change{
+    	height: 35px;
+	    line-height: 35px;
+	    font-size: 1.5rem;
+	    color: white;
+	    width: 56px;
+	    border-radius: 0 20px 20px 0;
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+    }
+}
+
+.order-coupon-box{
+	overflow: hidden;
+    border-radius: 12px;
+    margin-top: 10px;
+    padding: 10px 5px;
+    .coupon-price{
+    	width:27%;
+    	p{
+    		font-size: 1.6rem;
+    	}
+    	span{
+    		font-size: 2.5rem;
+    	}
+    }
+    .coupon-info{
+	    margin-left: 10px;
+	    text-align: left;
+	    p:first-child{
+	    	color:$brandColor-M;
+	    	font-size:1.5rem;
+	    }
+	    p:last-child {
+	    	margin-top:0;
+	    	font-size:1.3rem;
+		}
+    }
+    .coupon-check{
+    	padding-right: 5px;
+    	span{
+    		display: block;
+    		background-image: url(../image/icon/icon-check-white.png);
+		    width: 15px;
+		    height: 15px;
+		    background-size: cover;
+		    text-align: center;
+		    line-height: 15px;
+		    margin-top: 17px;
+    	}
+    }
+}
+
+.red-coupon{
+	background-color: #ffccd6;
+	.coupon-price{
+		p{
+    		color: $brandRed;
+    	}
+	}
+}
+
+.default-coupon{
+	background-color: $brandGrey;
+	.coupon-price{
+		p{
+    		color: $brandColor-M;
+    	}
+	}
+	.coupon-info{
+	    p:last-child{
+	    	color:$brandColor-M;
+	    }
+    }
+}

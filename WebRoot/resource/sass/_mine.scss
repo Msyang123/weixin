@@ -1,0 +1,201 @@
+.bg-close{
+	background:$bgGrey!important;
+}
+.me-page{
+	hr{
+		border: 0;
+	    border-top: 1px solid $brandGrey;
+	    margin: 0 1.5rem;
+	}
+}
+#main {
+    color: $brandColor-H;
+   
+    .top-box {
+        margin-bottom: 10px;
+        
+         .top-info {
+         	 height:10rem;
+		     background-color: rgba(255, 255, 255, 1);
+			 box-shadow: 0px 5px 9.5px 0.5px rgba(255, 56, 97, 0.2);
+			 margin: 0 10px;
+		     padding: 1rem 0 0;
+		    .top-tittle {
+			    font-size: 1.4rem;
+			    color: $brandColor-H;
+			    font-weight: 400 !important;
+			}
+			.top-value {
+			    font-size: 1.4rem;
+			    color: $brandRed;
+			    margin-top: 0.5rem;
+			}
+		}
+		
+		.user-info-box{
+			position: relative;
+    		top: -4.3rem;
+		}
+    }
+} 
+
+.imgbutton {
+    background-color: white;
+    padding-top: 20px;
+    position: relative;
+    img{
+    	width:30px;
+    }
+}
+
+.img_menu {
+    font-size: 1.3rem;
+    color: $brandColor-M;
+    margin-top: 8px;
+    padding-bottom: 10px;
+}
+
+@media only screen and (min-width:384px) {
+    .present-icon {
+        top: 13px;
+        right: 40px;
+    }
+}
+
+@media only screen and (min-width:352px) and (max-width:384px) {
+    .present-icon {
+        top: 13px;
+        right: 34px;
+    }
+}
+
+@media only screen and (min-width:320px) and (max-width:352px) {
+    .present-icon {
+        top: 10px;
+        right: 28px;
+    }
+}
+table#my_features {
+    width: 100%;
+}
+
+.me-order {
+    background-color: white;
+    height: 40px;
+    line-height: 40px;
+    padding:0 1.5rem;
+}
+
+.me-order-text {
+    color: $brandColor-H;
+    font-size: 1.5rem;
+    float: left;
+}
+
+.me-order img {
+    margin-bottom: 2px;
+}
+
+#my_features tr td {
+    width: 33%;
+}
+
+#me_person {
+    margin-bottom: 64px;
+}
+
+.user-info {
+    width: 100%;
+    height: 8.6rem;
+    background-image: linear-gradient(180deg, rgba(255, 56, 97, 1) 0%, rgba(255, 101, 100, 1) 46%, rgba(255, 146, 103, 1) 100%);
+    .btn-code{
+        position: absolute;
+	    top: 25px;
+	    right: 20px;
+    }
+}
+
+.user-img {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+.user-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.user-name {
+    color: $brandColor-H;
+    line-height: 30px;
+    height: 30px;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.all-order {
+    float: right;
+    color: $brandColor-M;
+    font-size: 1.2rem;
+}
+
+.icon-box {
+    height: 40px;
+}
+
+.icon-box img {
+    height: 100%;
+}
+
+.num-icon, .present-icon {
+    position: absolute;
+    display: block;
+    width: 20px;
+    color: $brandRed;
+    font-size: 1.1rem;
+    text-align: center;
+    border: 2px solid $brandRed;
+    border-radius: 20px;
+    background-color: white;
+    height: 20px;
+    line-height: 16px;
+}
+
+@media only screen and (min-width:384px) {
+    .num-icon {
+        left: 60px;
+        top: -50px;
+    }
+}
+
+@media only screen and (min-width:352px) and (max-width:384px) {
+    .num-icon {
+        left: 55px;
+        top: -50px;
+    }
+}
+
+@media only screen and (min-width:320px) and (max-width:352px) {
+    .num-icon {
+        left: 45px;
+        top: -50px;
+    }
+}
+
+.user-opreation {
+	padding: 10px 25px;
+	background-color: white;
+	.user-opreat {
+	    font-size: 1.3rem;
+	    color: $brandColor-M;
+	    margin-top: 5px;
+	    position: relative;
+	}
+}
+
+#testbar {
+    width: 400px;
+    height: 500px;
+}
